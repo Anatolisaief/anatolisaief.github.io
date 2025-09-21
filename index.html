@@ -1,11 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Curriculum Vitae de Anatolii Isaev, desarrollador web especializado en Java, Python, PHP, Node.js y UX/UI.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Curriculum Vitae de Anatolii Isaev</title>
 </head>
+
 <body>
-    <h1>Hola mundo</h1>
+
+    <header>
+    <div class="header-container">
+        <h1>Anatolii Isaev</h1>
+        <button class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#competencias">Competencias técnicas</a></li>
+                <li><a href="#formacion-academica">Formación</a></li>
+                <li><a href="#proyectos">Mis proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+
+        <!-- SOBRE MI -->
+        <div class="imagen_de_fondo">
+            <section id="sobre-mi">
+                <div class="descripcion">
+                    <div class="imagenMasDatosPersonales">
+                        <img src="https://cdn.pixabay.com/photo/2024/06/01/09/44/swan-8801932_1280.jpg"
+                            alt="Foto de Anatolii Isaev">
+                    </div>
+                    <div>
+                        <p>
+                            Hola, soy Anatolii, un desarrollador web apasionado por crear experiencias digitales
+                            atractivas y funcionales.
+                            Me encanta enfrentar desafíos, aprender nuevas tecnologías y encontrar soluciones creativas
+                            que realmente hagan la vida más fácil a los usuarios.
+                            Soy responsable, organizado y siempre busco dar lo mejor en cada proyecto que emprendo. Más
+                            que código, disfruto construir productos que marquen la diferencia y que combinen diseño y
+                            usabilidad.
+                        </p>
+                    </div>
+                </div>
+                <div class="datos">
+                    <h3>Anatolii Isaev</h3>
+                    <h4>Estudiante DAM / Desarrollador Web · Front-end & UX/UI · APIs RESTful</h4>
+                    <div class="contacto_info">
+                        <p><i class="fas fa-map-marker-alt"></i> Vitoria-Gasteiz, España</p>
+                        <p><i class="fa-brands fa-whatsapp"></i></i> +34 74 74 088 41</p>
+                        <p><i class="fas fa-envelope"></i> anatolisaief@gmail.com</p>
+                    </div>
+
+
+
+                    <p class="social-icons">
+                        <a href="https://github.com/Anatolisaief" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anatolisaev/" target="_blank" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+
+        <!-- COMPETENCIAS -->
+        <section id="competencias" class="marginTop">
+            <h2 class="borderh2">Competencias técnicas</h2>
+            <div class="contenido">
+                <ul>
+                    <li>Lenguajes de programación: <em> Java, Python, PHP </em></li>
+                    <li>Bases de datos: <em> MySQL, Oracle SQL, MongoDB</em></li>
+                    <li>Desarrollo web:
+                        <ul>
+                            <li>Front-end: <em>HTML5, CSS3, JavaScript, DOM, consumo de APIs REST</em></li>
+                            <li>Back-end: <em> Node.js</em></li>
+                        </ul>
+                    </li>
+                    <li>Control de versiones: <em> Git, GitHub</em></li>
+                    <li>Frameworks: <em>Express.js (Node.js)</em>, conocimientos básicos de <em>Streamlit (Python)</em>
+                    </li>
+                    <li>Idiomas: <em> Español</em> y <em>Ruso</em> hablado y escrito, <em>Inglés</em>
+                        intermedio</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FORMACION -->
+        <section id="formacion-academica" class="marginTop">
+            <h2 class="borderh2">Formación académica</h2>
+            <div class="contenido">
+                <article class="formacion-item">
+                    <h3>Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+                    <p><a href="https://www.uax.com/" target="_blank" rel="noopener noreferrer">
+                            Universidad Alfonso X el Sabio
+                        </a> · Madrid</p>
+                    <p class="periodo">2024 - actualmente</p>
+                </article>
+
+                <article class="formacion-item">
+                    <h3>Front-end developer & UX/UI Designer con desarrollo de API RESTful</h3>
+                    <p><a href="https://www.saregune.net/es/" target="_blank" rel="noopener noreferrer">
+                            Saregune
+                        </a> · Vitoria-Gasteiz</p>
+                    <p class="periodo">2025 · 480 horas</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="marginTop">
+            <h2 class="borderh2">Mis proyectos</h2>
+            <div class="carousel-container">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+
+                    <article class="project-card">
+                        <h3><a href="https://github.com/Anatolisaief/lessence-privee" target="_blank"
+                                title="Ver el código en GitHub" rel="noopener noreferrer">L’Essence Privée - Tienda de
+                                Perfumes Artesanales </a></h3>
+
+                        <ul>
+                            <li>Desarrollo de un sitio web dinámico con <b>PHP, MySQL, HTML5, CSS3 y JavaScript</b>.
+                            </li>
+                            <li>Implementación de base de datos relacional para gestión de perfumes y pedidos.</li>
+                            <li>Creación de componentes reutilizables en PHP (header, footer, módulo de productos).</li>
+                            <li>Diseño responsive y validación de formularios con HTML5 y CSS.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card">
+                        <h3><a href="https://github.com/Anatolisaief/kudehezi" target="_blank"
+                                title="Ver el código en GitHub" rel="noopener noreferrer">KUDEHEZI - Gestor de Acciones
+                                Empresariales </a></h3>
+                        <ul>
+                            <li>Aplicación web <b>full-stack</b> para la gestión de acciones y eventos de una empresa.
+                            </li>
+                            <li>Implementación de <b>CRUD</b> completo con filtros avanzados y validación.</li>
+                            <li>Uso de <b> Node.js, Express.js, JavaScript, HTML5 y CSS3</b> en un entorno modular.</li>
+                            <li>Sistema de confirmación de eliminación con diálogos y notificaciones (toasts).</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card">
+                        <h3><a href="https://github.com/Anatolisaief/gestor_tareas_personal" target="_blank"
+                                title="Ver el código en GitHub" rel="noopener noreferrer">Gestor Personal de Tareas</a>
+                        </h3>
+
+                        <ul>
+                            <li>Aplicación web ligera con <b>HTML5, CSS3 y JavaScript</b>.</li>
+                            <li>CRUD completo de tareas con prioridad, fecha límite y notificaciones visuales.</li>
+                            <li>Persistencia en el navegador usando localStorage.</li>
+                            <li>Diseño responsive y formularios dinámicos validados.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card">
+                        <h3><a href="https://github.com/Anatolisaief/gestor-peliculas" target="_blank"
+                                title="Ver el código en GitHub" rel="noopener noreferrer">Gestor de Películas</a></h3>
+
+                        <ul>
+                            <li>Aplicación fullstack con <b>HTML5, CSS3 y JavaScript (Frontend)</b> y
+                                <b>Node.js + Express (Backend)</b>.
+                            </li>
+                            <li>CRUD completo de películas con título, director y año.</li>
+                            <li>Comunicación cliente-servidor mediante <code>fetch</code> y manejo de rutas en Express.
+                            </li>
+                            <li>Confirmación de eliminación con <code>&lt;dialog&gt;</code> y edición en formulario
+                                dinámico.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card">
+                        <h3><a href="https://github.com/Anatolisaief/api_tarot/" target="_blank"
+                                title="Ver el código en GitHub" rel="noopener noreferrer">Tarot Cards App</a></h3>
+                        <ul>
+                            <li>Aplicación web interactiva con <b>HTML5, CSS3 y JavaScript</b>.</li>
+                            <li>Integración con la <b>Tarot API</b> para obtener cartas y sus significados.</li>
+                            <li>Uso de imágenes personalizadas almacenadas localmente y mapeadas a cada carta.</li>
+                            <li>Funcionalidad de mostrar una carta aleatoria o todas las cartas disponibles.</li>
+                        </ul>
+                    </article>
+
+                </div>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+
+    </main>
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <p><i class="fas fa-envelope"></i> anatolisaief@gmail.com</p>
+        <p><i class="fa-brands fa-whatsapp"></i></i> +34 74 74 088 41</p>
+        <div class="social-icons">
+            <a href="https://github.com/Anatolisaief" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anatolisaev/" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
