@@ -564,7 +564,14 @@ footer small {
 
     header {
         padding: 10px 20px;
+       
     }
+     header h1{
+        color: #b5b5b5;
+        font-size: 1.2rem;
+     }
+
+     
 
     #sobre-mi {
         flex-direction: column-reverse;
@@ -611,7 +618,7 @@ footer small {
 
     nav {
         position: fixed;
-        top: 65px;
+        top: 55px;
         /* Pegado al header */
         left: 50%;
         transform: translateX(-50%);
