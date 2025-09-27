@@ -72,6 +72,41 @@ prevBtn.addEventListener("click", () => {
 // inicializar mostrando la primera
 showCard(currentIndex);
 
+// Nuevo bloque para swipe táctil 
+let startX = 0;
+let endX = 0;
+
+const carousel = document.querySelector('.carousel');
+
+carousel.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', () => {
+  const diff = startX - endX;
+
+  if (diff > 50) {
+    // swipe hacia izquierda → siguiente tarjeta
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+      showCard(currentIndex);
+    }
+  } else if (diff < -50) {
+    // swipe hacia derecha → tarjeta anterior
+    if (currentIndex > 0) {
+      currentIndex--;
+      showCard(currentIndex);
+    }
+  }
+
+  startX = 0;
+  endX = 0;
+});
+
 
 // Menú hamburguesa
 const hamburger = document.getElementById('hamburger');
