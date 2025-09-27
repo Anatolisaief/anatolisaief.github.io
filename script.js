@@ -77,6 +77,7 @@ showCard(currentIndex);
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const icon = hamburger.querySelector('i');
+const navLinks = document.querySelectorAll('#nav-menu a');
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
@@ -88,4 +89,15 @@ hamburger.addEventListener('click', () => {
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
     }
+});
+
+// Cerrar menú al hacer clic en un enlace
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    if (!icon.classList.contains('fa-bars')) {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
 });
