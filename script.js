@@ -1,3 +1,19 @@
+const cards = document.querySelectorAll(".project-card");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let currentIndex = 0;
+let startX = 0;
+let endX = 0;
+
+const carousel = document.querySelector('.carousel');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+const icon = hamburger.querySelector('i');
+const navLinks = document.querySelectorAll('#nav-menu a');
+
+
+
 // Animación de secciones al entrar en vista
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
@@ -37,11 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //Listar proyectos
-const cards = document.querySelectorAll(".project-card");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
-
-let currentIndex = 0;
 
 // función para mostrar solo la tarjeta actual
 function showCard(index) {
@@ -72,11 +83,7 @@ prevBtn.addEventListener("click", () => {
 // inicializar mostrando la primera
 showCard(currentIndex);
 
-// Nuevo bloque para swipe táctil 
-let startX = 0;
-let endX = 0;
-
-const carousel = document.querySelector('.carousel');
+// Nuevo bloque para swipe táctil
 
 carousel.addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
@@ -109,11 +116,6 @@ carousel.addEventListener('touchend', () => {
 
 
 // Menú hamburguesa
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const icon = hamburger.querySelector('i');
-const navLinks = document.querySelectorAll('#nav-menu a');
-
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     // Cambiar icono de barras a cruz

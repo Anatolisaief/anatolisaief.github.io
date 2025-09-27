@@ -15,17 +15,12 @@ body {
 
 }
 
-
-
 h1,
 h2,
 h3 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
 }
-
-
-
 
 
 /* Encabezado y navegación */
@@ -111,13 +106,13 @@ section {
     margin-bottom: 40px;
     background-color: #202020;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-section {
-    opacity: 0;
+     opacity: 0;
     transform: translateY(50px);
     transition: all 1.2s ease-out;
+    scroll-margin-top: 70px;
 }
+
+
 
 /* Cuando entran en pantalla */
 section.visible {
@@ -164,8 +159,7 @@ section h2 {
 .imagen_de_fondo {
     width: 100%;
     padding: 60px 20px;
-    background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/460.jpg");
-    /* background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/1261.jpg"); */
+    background-image: url("assets/square-glitch-golden.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -173,7 +167,6 @@ section h2 {
 
 
 }
-
 
 
 /* asegurar que el contenido esté sobre la capa oscura */
@@ -281,6 +274,8 @@ section h2 {
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.8),
         0 0 20px rgba(212, 175, 55, 0.6);
 }
+
+
 
 /* Listas */
 ul {
@@ -461,7 +456,6 @@ button.next:hover {
 
 footer {
     background-color: #1a1a1a;
-    /* oscuro, consistente con header */
     color: #b5b5b5;
     text-align: center;
     padding: 10px;
@@ -498,7 +492,7 @@ footer .social-icons a:hover {
         0 0 30px rgba(212, 175, 55, 0.5);
 }
 
-/* Opcional: agregar pequeño mensaje de copyright */
+
 footer small {
     display: block;
     margin-top: 20px;
@@ -607,6 +601,7 @@ footer small {
     nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     nav a {
@@ -614,7 +609,9 @@ footer small {
         text-align: center;
         margin-bottom: 10px;
         font-size: 1.5rem;
+       
     }
+  
 
     nav {
         position: fixed;
@@ -636,10 +633,6 @@ footer small {
         display: flex;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
 
     .hamburger {
         display: block;
