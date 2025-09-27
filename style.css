@@ -74,7 +74,8 @@ nav a:hover {
 
 
 .hamburger {
-       display: none; /* oculto en escritorio */
+    display: none;
+    /* oculto en escritorio */
     background: none;
     border: none;
     font-size: 2rem;
@@ -89,9 +90,11 @@ nav a:hover {
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
+
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -126,7 +129,7 @@ h2 {
     color: #F0AC3D;
     padding-bottom: 10px;
     border-bottom: 1px solid #F0AC3D;
-    animation:  goldenGlow 3s infinite alternate ease-in-out;
+    animation: goldenGlow 3s infinite alternate ease-in-out;
 }
 
 section h2 {
@@ -501,9 +504,11 @@ footer small {
     0% {
         text-shadow: 0 0 3px rgba(237, 181, 0, 0.9);
     }
+
     50% {
         text-shadow: 0 0 10px rgba(237, 181, 0, 0.9);
     }
+
     100% {
         text-shadow: 0 0 3px rgba(237, 181, 0, 0.9);
     }
@@ -543,13 +548,37 @@ footer small {
 
 @media (max-width: 767px) {
 
+    body {
+        padding-top: 0;
+    }
+
     header {
-        position: static;
+        padding: 10px 20px;
+    }
+
+    #sobre-mi {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+
+    }
+
+    .descripcion,
+    .datos {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
     }
 
     h1 {
         font-size: 2rem;
     }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+
 
     nav ul {
         flex-direction: column;
@@ -558,23 +587,25 @@ footer small {
 
     nav a {
         display: block;
-        width: 200px;
         text-align: center;
         margin-bottom: 10px;
+        font-size: 1.5rem;
     }
 
-      nav {
-        position: absolute;
-        top: 70px; /* debajo del header */
-        right: 0;
-        width: 200px;
+    nav {
+        position: fixed;
+        top: 65px;
+        /* Pegado al header */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
         background-color: #1a1a1a;
         display: none;
         flex-direction: column;
         text-align: center;
-        padding: 10px 0;
-        border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        padding: 20px 0;
+        z-index: 1000;
+
     }
 
     nav.active {
@@ -586,11 +617,21 @@ footer small {
         gap: 15px;
     }
 
-     .hamburger {
-        display: block; /* visible en móvil */
+    .hamburger {
+        display: block;
+        /* visible en móvil */
     }
 
     #cv {
         padding: 15px;
     }
+
+    button.prev {
+        left: 0px;
+    }
+
+    button.next {
+        right: 0px;
+    }
+
 }
