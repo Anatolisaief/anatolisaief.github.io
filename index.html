@@ -8,6 +8,7 @@
     <meta name="description"
         content="Curriculum Vitae de Anatolii Isaev, desarrollador web especializado en Java, Python, PHP, Node.js y UX/UI.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Curriculum Vitae de Anatolii Isaev</title>
 </head>
@@ -241,7 +242,47 @@
             </a>
         </div>
     </footer>
+
+    <!-- CHATBOT -->
+    <button id="chatToggle" class="chat-toggle" aria-label="Abrir chat">
+        💬
+    </button>
+
+    <div id="chatWidget" class="chat-widget hidden">
+        <div class="chat-card">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <div class="chat-header-avatar">🤖</div>
+                    <div>
+                        <h1 id="botTitle">Asistente virtual</h1>
+                        <p id="botSubtitle">Haz una pregunta sobre el contenido disponible</p>
+                    </div>
+                </div>
+
+                <div class="chat-header-right">
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        <span>En línea</span>
+                    </div>
+                    <button id="closeChat" class="close-chat">✕</button>
+                </div>
+            </div>
+
+            <div id="chat" class="chat-messages">
+                <div class="message bot">
+                    <div class="avatar bot-avatar">🤖</div>
+                    <div class="message-bubble">Hola, soy el asistente virtual. Puedes preguntarme sobre Anatolii, su formación, experiencia, tecnologías o proyectos.</div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="input" placeholder="Escribe tu pregunta..." autocomplete="off" />
+                <button id="sendBtn">Enviar</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
 
 </body>
 
