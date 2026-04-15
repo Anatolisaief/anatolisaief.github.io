@@ -39,76 +39,76 @@ async function loadBotConfig() {
       const theme = config.theme;
 
       if (theme.primaryColor) {
-        document.documentElement.style.setProperty("--primary-color", theme.primaryColor);
+        document.documentElement.style.setProperty("--chatbot-primary-color", theme.primaryColor);
       }
       if (theme.primaryColorHover) {
-        document.documentElement.style.setProperty("--primary-color-hover", theme.primaryColorHover);
+        document.documentElement.style.setProperty("--chatbot-primary-color-hover", theme.primaryColorHover);
       }
       if (theme.backgroundColor) {
         document.documentElement.style.setProperty("--chatbot-background-color", theme.backgroundColor);
       }
       if (theme.cardColor) {
-        document.documentElement.style.setProperty("--card-color", theme.cardColor);
+        document.documentElement.style.setProperty("--chatbot-card-color", theme.cardColor);
       }
       if (theme.textColor) {
         document.documentElement.style.setProperty("--chatbot-text-color", theme.textColor);
       }
       if (theme.mutedTextColor) {
-        document.documentElement.style.setProperty("--muted-text-color", theme.mutedTextColor);
+        document.documentElement.style.setProperty("--chatbot-muted-text-color", theme.mutedTextColor);
       }
       if (theme.borderColor) {
-        document.documentElement.style.setProperty("--border-color", theme.borderColor);
+        document.documentElement.style.setProperty("--chatbot-border-color", theme.borderColor);
       }
       if (theme.inputBorderColor) {
-        document.documentElement.style.setProperty("--input-border-color", theme.inputBorderColor);
+        document.documentElement.style.setProperty("--chatbot-input-border-color", theme.inputBorderColor);
       }
       if (theme.botBubble) {
-        document.documentElement.style.setProperty("--bot-bubble", theme.botBubble);
+        document.documentElement.style.setProperty("--chatbot-bot-bubble", theme.botBubble);
       }
       if (theme.userBubble) {
-        document.documentElement.style.setProperty("--user-bubble", theme.userBubble);
+        document.documentElement.style.setProperty("--chatbot-user-bubble", theme.userBubble);
       }
       if (theme.userBubbleText) {
-        document.documentElement.style.setProperty("--user-bubble-text", theme.userBubbleText);
+        document.documentElement.style.setProperty("--chatbot-user-bubble-text", theme.userBubbleText);
       }
       if (theme.chatMessagesBg) {
-        document.documentElement.style.setProperty("--chat-messages-bg", theme.chatMessagesBg);
+        document.documentElement.style.setProperty("--chatbot-messages-bg", theme.chatMessagesBg);
       }
       if (theme.botAvatarBg) {
-        document.documentElement.style.setProperty("--bot-avatar-bg", theme.botAvatarBg);
+        document.documentElement.style.setProperty("--chatbot-bot-avatar-bg", theme.botAvatarBg);
       }
       if (theme.userAvatarBg) {
-        document.documentElement.style.setProperty("--user-avatar-bg", theme.userAvatarBg);
+        document.documentElement.style.setProperty("--chatbot-user-avatar-bg", theme.userAvatarBg);
       }
       if (theme.headerAvatarBg) {
-        document.documentElement.style.setProperty("--header-avatar-bg", theme.headerAvatarBg);
+        document.documentElement.style.setProperty("--chatbot-header-avatar-bg", theme.headerAvatarBg);
       }
       if (theme.statusDotColor) {
-        document.documentElement.style.setProperty("--status-dot-color", theme.statusDotColor);
+        document.documentElement.style.setProperty("--chatbot-status-dot-color", theme.statusDotColor);
       }
       if (theme.shadowColor) {
-        document.documentElement.style.setProperty("--shadow-color", theme.shadowColor);
+        document.documentElement.style.setProperty("--chatbot-shadow-color", theme.shadowColor);
       }
       if (theme.toggleShadowColor) {
-        document.documentElement.style.setProperty("--toggle-shadow-color", theme.toggleShadowColor);
+        document.documentElement.style.setProperty("--chatbot-toggle-shadow-color", theme.toggleShadowColor);
       }
       if (theme.borderRadiusCard) {
-        document.documentElement.style.setProperty("--border-radius-card", theme.borderRadiusCard);
+        document.documentElement.style.setProperty("--chatbot-border-radius-card", theme.borderRadiusCard);
       }
       if (theme.borderRadiusButton) {
-        document.documentElement.style.setProperty("--border-radius-button", theme.borderRadiusButton);
+        document.documentElement.style.setProperty("--chatbot-border-radius-button", theme.borderRadiusButton);
       }
       if (theme.fontFamily) {
         document.documentElement.style.setProperty("--chatbot-font-family", theme.fontFamily);
       }
       if (theme.inputTextColor) {
-        document.documentElement.style.setProperty("--input-text-color", theme.inputTextColor);
+        document.documentElement.style.setProperty("--chatbot-input-text-color", theme.inputTextColor);
       }
       if (theme.inputBackgroundColor) {
-        document.documentElement.style.setProperty("--input-background-color", theme.inputBackgroundColor);
+        document.documentElement.style.setProperty("--chatbot-input-background-color", theme.inputBackgroundColor);
       }
       if (theme.placeholderColor) {
-        document.documentElement.style.setProperty("--placeholder-color", theme.placeholderColor);
+        document.documentElement.style.setProperty("--chatbot-placeholder-color", theme.placeholderColor);
       }
     }
   } catch (error) {
