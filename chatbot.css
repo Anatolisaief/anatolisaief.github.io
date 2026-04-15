@@ -337,13 +337,13 @@
 
 /* Mobile */
 @media (max-width: 480px) {
-  .chat-widget {
+   .chat-widget {
     left: 12px;
     right: 12px;
     bottom: 84px;
     width: auto;
-    height: min(72vh, 540px);
-    max-height: calc(100vh - 100px);
+    height: min(60dvh, 540px);
+max-height: 60dvh;
   }
 
   .chat-toggle {
@@ -381,6 +381,6 @@
 
   .chat-input-area input,
   .chat-input-area button {
-    font-size: 14px;
+     font-size: 16px;
   }
 }
