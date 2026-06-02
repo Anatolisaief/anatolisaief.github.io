@@ -39,8 +39,7 @@
             <section id="sobre-mi">
                 <div class="descripcion">
                     <div class="imagenMasDatosPersonales">
-                        <img src="assets/swan.jpg"
-                            alt="Foto de Anatolii Isaev">
+                        <img src="assets/swan.jpg" alt="Foto de Anatolii Isaev">
                     </div>
                     <div>
                         <p>
@@ -147,6 +146,22 @@
                 <div class="carousel">
 
                     <article class="project-card">
+                        <h3>
+                            <a href="tarotapp.html" title="Ver proyecto TarotApp">
+                                TarotApp - Aplicación Android de Tarot
+                            </a>
+                        </h3>
+
+                        <ul>
+                            <li>Aplicación Android de tarot desarrollada en <b>Kotlin</b>.</li>
+                            <li>Tiradas personalizadas con interpretación contextual de las cartas.</li>
+                            <li>Perfil de usuario, historial de lecturas y baraja completa.</li>
+                            <li>Arquitectura <b>MVVM</b>, persistencia local con <b>Room</b> y sincronización con
+                                <b>Supabase</b>.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card">
                         <h3><a href="https://github.com/Anatolisaief/lessence-privee" target="_blank"
                                 title="Ver el código en GitHub" rel="noopener noreferrer">L’Essence Privée - Tienda de
                                 Perfumes Artesanales </a></h3>
@@ -243,20 +258,20 @@
     </footer>
     <script src="script.js"></script>
     <script>
-  window.ChatbotConfig = {
-    apiBaseUrl: "https://chatbot-07hc.onrender.com",
-    configName: "cv"
-  };
+        window.ChatbotConfig = {
+            apiBaseUrl: "https://chatbot-07hc.onrender.com",
+            configName: "cv"
+        };
 
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      const s = document.createElement("script");
-      s.src = "https://chatbot-07hc.onrender.com/widget.js";
-      s.defer = true;
-      document.body.appendChild(s);
-    }, 800);
-  });
-</script>
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                const s = document.createElement("script");
+                s.src = "https://chatbot-07hc.onrender.com/widget.js";
+                s.defer = true;
+                document.body.appendChild(s);
+            }, 800);
+        });
+    </script>
 
 
 

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TarotApp | Anatolii Isaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+    <div class="header-container">
+        <h1>Anatolii Isaev</h1>
+        <a href="index.html" class="btn-volver">Volver al portfolio</a>
+    </div>
+</header>
+
+    <main>
+
+        <!-- RESUMEN DEL PROYECTO -->
+        <section class="proyecto-detalle proyecto-hero">
+
+            <div class="hero-titulo">
+                <img src="assets/logo-tarotapp.webp" alt="Logo de TarotApp">
+                <h2 class="borderh2">TarotApp</h2>
+            </div>
+
+            <p class="proyecto-subtitulo">
+                Aplicación Android de tarot con tiradas personalizadas,
+                historial de lecturas, perfil de usuario y contenido dinámico.
+            </p>
+
+            <p>
+                Proyecto desarrollado en Kotlin como proyecto final del ciclo DAM. La aplicación combina
+                arquitectura MVVM, persistencia local con Room, sincronización remota con Supabase
+                y carga de datos mediante archivos JSON.
+            </p>
+
+            <p>
+                Incluye tirada diaria, tirada de tres cartas, historial sincronizado,
+                baraja completa y personalización basada en la fecha de nacimiento.
+            </p>
+
+            <div class="tech-tags">
+                <span>Kotlin</span>
+                <span>Android Studio</span>
+                <span>MVVM</span>
+                <span>Room</span>
+                <span>Supabase</span>
+                <span>RecyclerView</span>
+                <span>JSON</span>
+            </div>
+
+        </section>
+
+        <!-- AUTENTICACIÓN -->
+        <section class="proyecto-detalle">
+
+            <h2 class="borderh2">Autenticación de usuarios</h2>
+
+            <div class="proyecto-grid">
+
+                <div class="proyecto-texto">
+
+                    <p>
+                        La aplicación cuenta con pantalla inicial, registro e inicio de sesión.
+                        Cada usuario dispone de su propio perfil y de un historial de lecturas asociado.
+                    </p>
+
+                    <p>
+                        El sistema fue desarrollado en Kotlin utilizando Room Database para el almacenamiento local
+                        y Supabase para la sincronización de datos. La validación de credenciales se realiza desde
+                        la propia lógica de la aplicación.
+                    </p>
+
+                    <ul>
+                        <li>Registro e inicio de sesión.</li>
+                        <li>Persistencia local con Room.</li>
+                        <li>Sincronización con Supabase.</li>
+                        <li>Perfil e historial asociados a cada usuario.</li>
+                    </ul>
+
+                </div>
+
+                <div class="proyecto-media">
+
+                    <img src="assets/autenticacion.webp" alt="Menú principal de TarotApp" class="captura-app">
+
+                    <img src="assets/inicio.webp" alt="Menú principal de TarotApp" class="captura-app">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MENÚ PRINCIPAL -->
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Menú principal</h2>
+
+            <div class="proyecto-grid">
+                <div class="proyecto-texto">
+                    <p>
+                        Desde el menú principal el usuario puede acceder a todas las funcionalidades
+                        de la aplicación. La navegación se realiza mediante botones que permiten
+                        consultar las distintas secciones de forma sencilla e intuitiva.
+                    </p>
+
+                    <ul>
+                        <li>Tirada diaria interactiva.</li>
+                        <li>Tirada de tres cartas.</li>
+                        <li>Historial de lecturas.</li>
+                        <li>Baraja completa.</li>
+                        <li>Perfil de usuario.</li>
+                    </ul>
+
+
+                    <p>
+                        Este diseño centraliza todas las funcionalidades principales en una única pantalla,
+                        permitiendo acceder rápidamente a cada sección desde un único punto de navegación.
+                    </p>
+                </div>
+
+                <div class="proyecto-media">
+
+                    <img src="assets/menu-principal.webp" alt="Menú principal de TarotApp" class="captura-app">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SISTEMA DE TIRADAS -->
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Sistema de tiradas</h2>
+
+            <div class="proyecto-grid">
+                <div class="proyecto-texto">
+                    <p>
+                        La aplicación incluye dos tipos de tiradas: una tirada diaria de una carta y una
+                        tirada de tres cartas (pasado, presente y futuro). El usuario puede realizar la
+                        consulta con o sin pregunta personalizada.
+                    </p>
+
+                    <p>
+                        Para generar las respuestas desarrollé un sistema de reglas que adapta
+                        la interpretación según la carta obtenida, el tipo de tirada y el
+                        contexto de la consulta. Esto permite ofrecer lecturas más personalizadas
+                        y coherentes con cada consulta.
+                    </p>
+
+                    <ul>
+                        <li>Selección aleatoria de cartas.</li>
+                        <li>Pregunta personalizada opcional.</li>
+                        <li>Interpretaciones dinámicas según la consulta.</li>
+                        <li>Palabras clave asociadas a cada carta.</li>
+                        <li>Consejos personalizados.</li>
+                        <li>Resultado guardado en el historial.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-media">
+
+                    <video controls class="demo-video">
+                        <source src="assets/videos/tirada-diaria.webm" type="video/webm">
+                        Tu navegador no soporta vídeo HTML5.
+                    </video>
+                    <video controls class="demo-video">
+                        <source src="assets/videos/tirada-3-cartas.webm" type="video/webm">
+                        Tu navegador no soporta vídeo HTML5.
+                    </video>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- HISTORIAL -->
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Historial de lecturas</h2>
+
+            <div class="proyecto-grid">
+                <div class="proyecto-texto">
+                    <p>
+                        Las lecturas realizadas se almacenan en un historial para que el usuario
+                        pueda consultarlas posteriormente.
+                    </p>
+
+                    <p>
+                        La persistencia de datos se implementa mediante Room Database para el
+                        almacenamiento local y Supabase para la sincronización remota,
+                        permitiendo conservar la información asociada a cada usuario.
+                    </p>
+
+                    <ul>
+                        <li>Guardado automático de lecturas.</li>
+                        <li>Consulta de tiradas anteriores.</li>
+                        <li>Almacenamiento local mediante Room Database.</li>
+                        <li>Sincronización remota con Supabase.</li>
+                    </ul>
+
+                    <p>
+                        Esta funcionalidad permite acceder rápidamente a lecturas anteriores
+                        desde la propia aplicación.
+                    </p>
+                </div>
+
+                <div class="proyecto-media">
+
+                    <img src="assets/historial.webp" alt="Historial de lecturas en TarotApp" class="captura-app">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BARAJA COMPLETA -->
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Baraja completa</h2>
+
+            <div class="proyecto-grid">
+                <div class="proyecto-texto">
+                    <p>
+                        La aplicación incluye una baraja completa con imágenes, palabras clave,
+                        significados y descripciones asociadas a cada carta. Toda la información
+                        se almacena en archivos JSON, lo que facilita su mantenimiento y la
+                        incorporación de nuevas cartas.
+                    </p>
+
+                    <p>
+                        La navegación por la baraja se implementa mediante RecyclerView,
+                        permitiendo consultar rápidamente las cartas disponibles y acceder
+                        a su información detallada.
+                    </p>
+
+                    <ul>
+                        <li>Listado completo de cartas.</li>
+                        <li>Filtros por tipo de carta.</li>
+                        <li>Vista detallada de cada carta.</li>
+                        <li>Información cargada desde archivos JSON.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-media">
+
+                    <img src="assets/baraja-completa.webp" alt="Baraja completa de TarotApp" class="captura-app">
+
+                    <img src="assets/detalle-carta.webp" alt="Detalle de carta en TarotApp" class="captura-app">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PERFIL Y PERSONALIZACIÓN -->
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Perfil y personalización</h2>
+
+            <div class="proyecto-grid">
+                <div class="proyecto-texto">
+                    <p>
+                        El perfil permite consultar y actualizar la información personal del usuario,
+                        incluyendo nombre, correo electrónico y fecha de nacimiento. Los datos se
+                        almacenan localmente y pueden sincronizarse con la base de datos remota.
+                    </p>
+
+                    <p>
+                        A partir de la fecha de nacimiento, la aplicación calcula automáticamente
+                        el signo zodiacal y el arcano personal, mostrando información personalizada
+                        dentro de la experiencia de usuario.
+                    </p>
+
+                    <ul>
+                        <li>Consulta y edición de perfil.</li>
+                        <li>Actualización de datos personales.</li>
+                        <li>Cierre de sesión y eliminación de cuenta.</li>
+                        <li>Cálculo automático del signo zodiacal.</li>
+                        <li>Cálculo automático del arcano personal.</li>
+                        <li>Personalización basada en la fecha de nacimiento.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-media">
+
+                    <video controls class="demo-video">
+                        <source src="assets/videos/perfil-edicion.webm" type="video/webm">
+                        Tu navegador no soporta vídeo HTML5.
+                    </video>
+                    <video controls class="demo-video">
+                        <source src="assets/videos/perfil-zodiaco.webm" type="video/webm">
+                        Tu navegador no soporta vídeo HTML5.
+                    </video>
+
+                </div>
+            </div>
+        </section>
+        <!-- RETOS TÉCNICOS -->
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Retos técnicos y soluciones</h2>
+
+            <p>
+                Durante el desarrollo de TarotApp fue necesario combinar distintas tecnologías
+                para gestionar usuarios, tiradas, historial y contenido personalizado dentro de
+                una misma aplicación.
+            </p>
+
+            <ul>
+                <li>Implementar una arquitectura MVVM para organizar el proyecto.</li>
+
+                <li>Combinar Room y Supabase para la persistencia local y remota de los datos.</li>
+
+                <li>Desarrollar un motor de reglas capaz de adaptar las interpretaciones al contexto de la consulta.
+                </li>
+
+                <li>Gestionar una baraja completa de cartas mediante archivos JSON y filtros dinámicos.</li>
+
+                <li>Diseñar interfaces orientadas a ofrecer una experiencia visual coherente y sencilla de utilizar.
+                </li>
+            </ul>
+
+            <p>
+                Estos retos permitieron desarrollar una aplicación completa,
+                combinando persistencia local y remota, gestión de contenido dinámico
+                y una interfaz adaptada a dispositivos Android.
+            </p>
+        </section>
+
+    </main>
+<footer id="contacto">
+        <h2>Contacto</h2>
+        <p class="email">
+            <i class="fas fa-envelope"></i>
+            anatolisaief&ZeroWidthSpace;@gmail.com
+        </p>
+        <p><i class="fa-brands fa-whatsapp"></i></i> +34 74 74 088 41</p>
+        <div class="social-icons">
+            <a href="https://github.com/Anatolisaief" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anatolisaev/" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="assets/cv-Anatolii-Isaev.pdf" download="cv-Anatolii-Isaev" class="btn-cv"
+                title="Descargar CV en PDF">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="tarotapp.js"></script>
+     <script>
+        window.ChatbotConfig = {
+            apiBaseUrl: "https://chatbot-07hc.onrender.com",
+            configName: "cv"
+        };
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                const s = document.createElement("script");
+                s.src = "https://chatbot-07hc.onrender.com/widget.js";
+                s.defer = true;
+                document.body.appendChild(s);
+            }, 800);
+        });
+    </script>
+
+</body>
+
+     
+
+</html>
