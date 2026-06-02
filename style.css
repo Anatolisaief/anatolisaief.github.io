@@ -620,6 +620,14 @@ footer small {
         0 0 20px rgba(240, 172, 61, 0.4);
 }
 
+.project-card {
+    pointer-events: none;
+}
+
+.project-card.active {
+    pointer-events: auto;
+}
+
 
 .proyecto-media .captura-app,
 .proyecto-media .demo-video {

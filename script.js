@@ -5,11 +5,12 @@ const nextBtn = document.querySelector(".next");
 let currentIndex = 0;
 let startX = 0;
 let endX = 0;
+let isTouchOnLink = false;
 
 const carousel = document.querySelector('.carousel');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
-const icon = hamburger.querySelector('i');
+const icon = hamburger ? hamburger.querySelector('i') : null;
 const navLinks = document.querySelectorAll('#nav-menu a');
 
 
@@ -55,86 +56,88 @@ document.addEventListener("DOMContentLoaded", () => {
 //Listar proyectos
 
 // función para mostrar solo la tarjeta actual
+// Listar proyectos
 function showCard(index) {
   cards.forEach((card, i) => {
     card.classList.toggle("active", i === index);
   });
 
-  // ocultar/mostrar flechas
-  prevBtn.style.display = index === 0 ? "none" : "block";
-  nextBtn.style.display = index === cards.length - 1 ? "none" : "block";
+  if (prevBtn && nextBtn) {
+    prevBtn.style.display = index === 0 ? "none" : "block";
+    nextBtn.style.display = index === cards.length - 1 ? "none" : "block";
+  }
 }
 
-// botones
-nextBtn.addEventListener("click", () => {
-  if (currentIndex < cards.length - 1) {
-    currentIndex++;
-    showCard(currentIndex);
-  }
-});
+if (carousel && prevBtn && nextBtn && cards.length > 0) {
+  showCard(currentIndex);
 
-prevBtn.addEventListener("click", () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    showCard(currentIndex);
-  }
-});
-
-// inicializar mostrando la primera
-showCard(currentIndex);
-
-// Nuevo bloque para swipe táctil
-
-carousel.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-carousel.addEventListener('touchmove', (e) => {
-  endX = e.touches[0].clientX;
-});
-
-carousel.addEventListener('touchend', () => {
-  const diff = startX - endX;
-
-  if (diff > 50) {
-    // swipe hacia izquierda → siguiente tarjeta
+  nextBtn.addEventListener("click", () => {
     if (currentIndex < cards.length - 1) {
       currentIndex++;
       showCard(currentIndex);
     }
-  } else if (diff < -50) {
-    // swipe hacia derecha → tarjeta anterior
+  });
+
+  prevBtn.addEventListener("click", () => {
     if (currentIndex > 0) {
       currentIndex--;
       showCard(currentIndex);
     }
-  }
+  });
 
-  startX = 0;
-  endX = 0;
-});
+  carousel.addEventListener("touchstart", (e) => {
+    isTouchOnLink = e.target.closest("a") !== null;
+    startX = e.touches[0].clientX;
+    endX = startX;
+  });
 
+  carousel.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener("touchend", () => {
+    if (isTouchOnLink) {
+      isTouchOnLink = false;
+      return;
+    }
+
+    const diff = startX - endX;
+
+    if (diff > 50 && currentIndex < cards.length - 1) {
+      currentIndex++;
+      showCard(currentIndex);
+    } else if (diff < -50 && currentIndex > 0) {
+      currentIndex--;
+      showCard(currentIndex);
+    }
+
+    startX = 0;
+    endX = 0;
+  });
+}
 
 // Menú hamburguesa
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    // Cambiar icono de barras a cruz
-    if(icon.classList.contains('fa-bars')){
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark'); // icono de cruz
-    } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-    }
-});
+if (hamburger && navMenu && icon) {
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
 
-// Cerrar menú al hacer clic en un enlace
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    if (!icon.classList.contains('fa-bars')) {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
+    if (icon.classList.contains("fa-bars")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
     }
   });
-});
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+
+      if (!icon.classList.contains("fa-bars")) {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+  });
+}
