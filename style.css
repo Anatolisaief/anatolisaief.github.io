@@ -634,6 +634,62 @@ footer small {
     margin: 0;
 }
 
+.media-item {
+    text-align: center;
+}
+
+.media-caption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #B0B0B0;
+    font-style: italic;
+}
+
+.diagrama-chatbot {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+.nota-demo {
+    margin-top: 30px;
+    padding: 15px;
+    border-left: 3px solid #F0AC3D;
+    color: #E0E0E0;
+    font-style: italic;
+}
+
+
+.chatbot-captura {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgba(240, 172, 61, 0.35);
+    box-shadow: 0 0 18px rgba(240, 172, 61, 0.25);
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.chatbot-captura:hover {
+    transform: scale(1.2);
+}
+
+.caption-chatbot {
+    margin-top: 34px;
+    max-width: 430px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #B8B8B8;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+
 @media (max-width: 767px) {
     .proyecto-grid {
         grid-template-columns: 1fr;
