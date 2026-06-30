@@ -141,3 +141,36 @@ if (hamburger && navMenu && icon) {
     });
   });
 }
+
+
+// Lightbox
+const imagenesLightbox = document.querySelectorAll(".imagen-lightbox");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const cerrarLightbox = document.getElementById("lightbox-cerrar");
+
+if (imagenesLightbox.length > 0 && lightbox && lightboxImg && cerrarLightbox) {
+  imagenesLightbox.forEach((imagen) => {
+    imagen.addEventListener("click", () => {
+      lightboxImg.src = imagen.src;
+      lightboxImg.alt = imagen.alt;
+      lightbox.classList.add("active");
+    });
+  });
+
+  cerrarLightbox.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      lightbox.classList.remove("active");
+    }
+  });
+}

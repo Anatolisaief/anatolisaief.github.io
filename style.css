@@ -614,6 +614,15 @@ footer small {
     box-shadow: 0 0 15px var(--sombra-dorada-media);
 }
 
+.captura-web {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 15px var(--sombra-dorada-media);
+}
+
 .demo-video {
     width: 100%;
     max-width: 230px;
@@ -655,9 +664,7 @@ footer small {
 
 .btn-volver {
     color: #d0d0d0;
-    /* mismo gris que el menú */
     font-size: 1.2rem;
-    /* mismo tamaño que los enlaces nav */
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -738,6 +745,45 @@ footer small {
     line-height: 1.6;
 }
 
+/* aumentar capturas de imagen */
+.imagen-lightbox {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    padding: 30px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(240, 172, 61, 0.4);
+}
+
+.lightbox-cerrar {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.captura-perfil {
+    max-width: 340px;
+}
 
 
 @media (max-width: 767px) {
