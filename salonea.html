@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salonéa | Anatolii Isaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Anatolii Isaev</h1>
+            <a href="index.html" class="btn-volver">Volver al portfolio</a>
+        </div>
+    </header>
+
+    <main>
+
+       <section class="proyecto-detalle proyecto-hero">
+    <div class="hero-titulo">
+        <img src="assets/salonea/logo_salonea.png" alt="Logo de Salonéa">
+        <h2 class="borderh2">Salonéa</h2>
+    </div>
+
+    <p class="proyecto-subtitulo">
+        Aplicación web full-stack para gestionar el día a día de una peluquería.
+    </p>
+
+    <p>
+        Salonéa es un sistema desarrollado con Java, Spring Boot y Angular para gestionar
+        clientes, citas, empleados, servicios, productos, promociones y usuarios.
+    </p>
+
+    <p>
+        El proyecto incluye una API REST, base de datos PostgreSQL, autenticación con
+        Spring Security y un frontend desarrollado con Angular, TypeScript y Bootstrap.
+    </p>
+
+    <div class="tech-tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Spring Security</span>
+        <span>Angular</span>
+        <span>TypeScript</span>
+        <span>PostgreSQL</span>
+        <span>Hibernate/JPA</span>
+        <span>REST API</span>
+        <span>Bootstrap</span>
+    </div>
+</section>
+
+        <section class="proyecto-detalle">
+    <h2 class="borderh2">Gestión principal</h2>
+
+    <div class="proyecto-grid">
+        <div class="proyecto-texto">
+            <p>
+                Salonéa centraliza la gestión de un salón de peluquería en una única aplicación.
+                Desde el panel principal es posible acceder a los distintos módulos y gestionar
+                la información relacionada con cada uno de ellos.
+            </p>
+
+            <ul>
+                <li>Clientes.</li>
+                <li>Empleados.</li>
+                <li>Servicios.</li>
+                <li>Productos.</li>
+                <li>Promociones.</li>
+                <li>Citas.</li>
+            </ul>
+        </div>
+
+        <div class="proyecto-media">
+            <img src="assets/salonea/main.png"
+                alt="Panel principal de Salonéa"
+                class="captura-web imagen-lightbox">
+        </div>
+    </div>
+</section>
+
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Autenticación y roles</h2>
+
+            <div class="proyecto-grid">
+                <div class="proyecto-texto">
+                    <p>
+                        Salonéa incorpora un sistema de autenticación desarrollado con Spring Security
+                        que permite controlar el acceso a la aplicación según el rol de cada usuario.
+                    </p>
+
+                    <ul>
+                        <li>Registro e inicio de sesión.</li>
+                        <li>Autenticación mediante Spring Security.</li>
+                        <li>Control de acceso según el rol del usuario.</li>
+                        <li>Gestión y edición del perfil.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-media">
+                    <img src="assets/salonea/perfil.png" alt="Perfil de usuario en Salonéa"
+                        class="captura-web imagen-lightbox captura-perfil">
+                </div>
+            </div>
+        </section>
+
+        <section class="proyecto-detalle">
+            <h2 class="borderh2">Gestión de citas y agenda</h2>
+
+            <div class="proyecto-grid">
+                <div class="proyecto-texto">
+                    <p>
+                        El módulo de citas permite gestionar la agenda del salón relacionando
+                        clientes, empleados y servicios en una única reserva.
+                    </p>
+
+                    <ul>
+                        <li>Creación, edición y eliminación de citas.</li>
+                        <li>Asignación de cliente, empleado y servicio.</li>
+                        <li>Búsqueda y filtrado de citas.</li>
+                        <li>Estados: pendiente, confirmada, cancelada y realizada.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-media">
+                    <img src="assets/salonea/citas.png" alt="Gestión de citas en Salonéa"
+                        class="captura-web imagen-lightbox">
+                </div>
+            </div>
+        </section>
+
+        <section class="proyecto-detalle">
+    <h2 class="borderh2">Arquitectura del proyecto</h2>
+
+    <p>
+        La aplicación sigue una arquitectura por capas que separa el frontend, el backend y la base de datos,
+        facilitando la organización y el mantenimiento del proyecto.
+    </p>
+
+    <ul>
+        <li><b>Frontend:</b> Angular, TypeScript, HTML, CSS y Bootstrap.</li>
+        <li><b>Backend:</b> Java con Spring Boot.</li>
+        <li><b>Base de datos:</b> PostgreSQL.</li>
+        <li><b>Persistencia:</b> Spring Data JPA e Hibernate.</li>
+        <li><b>Seguridad:</b> Spring Security.</li>
+        <li><b>Comunicación:</b> API REST mediante peticiones HTTP entre Angular y Spring Boot.</li>
+    </ul>
+</section>
+
+        <section class="proyecto-detalle">
+    <h2 class="borderh2">Retos técnicos y aprendizaje</h2>
+
+    <p>
+        El desarrollo de Salonéa permitió aplicar conceptos de desarrollo full-stack,
+        seguridad, persistencia de datos y comunicación entre frontend y backend.
+    </p>
+
+    <ul>
+        <li>Creación de una API REST con Spring Boot.</li>
+        <li>Desarrollo del frontend con Angular y TypeScript.</li>
+        <li>Diseño de entidades relacionadas mediante JPA/Hibernate.</li>
+        <li>Uso de DTOs para la comunicación entre frontend y backend.</li>
+        <li>Implementación de autenticación y autorización con Spring Security.</li>
+        <li>Consumo de la API REST desde Angular mediante HttpClient.</li>
+        <li>Organización de un proyecto full-stack siguiendo una arquitectura por capas.</li>
+    </ul>
+</section>
+    </main>
+
+
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <p class="email">
+            <i class="fas fa-envelope"></i>
+            anatolisaief&ZeroWidthSpace;@gmail.com
+        </p>
+        <p><i class="fa-brands fa-whatsapp"></i> +34 74 74 088 41</p>
+        <div class="social-icons">
+            <a href="https://github.com/Anatolisaief" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anatolisaev/" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="assets/cv/cv-Anatolii-Isaev.pdf" download="cv-Anatolii-Isaev" class="btn-cv"
+                title="Descargar CV en PDF">
+                <i class="fas fa-file-pdf"></i>
+            </a>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-cerrar" id="lightbox-cerrar">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        window.ChatbotConfig = {
+            apiBaseUrl: "https://chatbot-07hc.onrender.com",
+            configName: "cv"
+        };
+
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                const s = document.createElement("script");
+                s.src = "https://chatbot-07hc.onrender.com/widget.js";
+                s.defer = true;
+                document.body.appendChild(s);
+            }, 800);
+        });
+    </script>
+</body>
+
+</html>
