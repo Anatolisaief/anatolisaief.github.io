@@ -1,0 +1,99 @@
+/* Cargar después de style.css: reutiliza los estilos comunes de Arcanira. */
+.arcanira-page.salonea-page .sl-hero {
+    display: block;
+    width: 100%;
+    min-height: 650px;
+    margin: 0;
+    padding: 28px 0 50px;
+    background-color: #111312;
+    background-image:
+        linear-gradient(to right,rgba(17,19,18,.97) 0%,rgba(17,19,18,.92) 38%,rgba(17,19,18,.55) 65%,rgba(17,19,18,.2) 100%),
+        url("assets/salonea/portada-salonea.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.salonea-page .sl-hero-copy { width: 55%; max-width: 680px; }
+.salonea-page .sl-title-row { display:flex; align-items:center; gap:20px; margin-bottom:22px; }
+.salonea-page .sl-logo { width:72px; height:72px; object-fit:contain; flex-shrink:0; }
+.salonea-page .sl-title-row h1 { font-size:clamp(40px,4vw,60px); line-height:1.12; }
+.salonea-page .sl-hero-copy p { color:#c6c9c3; }
+.salonea-page .sl-hero-copy .sl-subtitle { font-size:20px; line-height:1.6; color:#dfb965; }
+.salonea-page .sl-hero-copy .arc-tags { margin-top:24px; }
+.salonea-page .sl-showcase {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+    align-items:center;
+    gap:56px;
+}
+.salonea-page .sl-showcase-reverse .arc-copy { order:2; }
+.salonea-page .sl-showcase-reverse .sl-media { order:1; }
+.salonea-page .sl-media { min-width:0; margin:0; }
+.salonea-page .sl-media .sl-capture {
+    display:block;
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+    margin:0;
+    padding:0;
+    border:1px solid #383b35;
+    outline:none;
+    border-radius:14px;
+    background:#181a18;
+    overflow:hidden;
+    cursor:zoom-in;
+    box-shadow:none;
+}
+.salonea-page .sl-capture:hover { transform:none; box-shadow:none; }
+.salonea-page .sl-capture img {
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:520px;
+    object-fit:contain;
+}
+.salonea-page .sl-media figcaption { margin-top:14px; color:#b5b8b4; font-size:13px; line-height:1.6; text-align:center; }
+.salonea-page .sl-list { list-style:none; margin:22px 0; padding:0; }
+.salonea-page .sl-list li { display:grid; grid-template-columns:14px minmax(0,1fr); gap:10px; margin-bottom:12px; }
+.salonea-page .sl-list li::before { content:"•"; color:#dfb965; }
+.salonea-page .sl-tech-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    margin:26px 0 0;
+    padding:0;
+    list-style:none;
+}
+.salonea-page .sl-tech-grid li { display:flex; align-items:flex-start; gap:16px; padding:24px; border:1px solid #383b35; border-radius:12px; background:#181a18; }
+.salonea-page .sl-tech-grid i { width:28px; flex-shrink:0; margin-top:4px; text-align:center; color:#dfb965; font-size:24px; }
+.salonea-page .sl-tech-grid h3 { font-size:22px; margin-bottom:10px; }
+.salonea-page .sl-tech-grid p { margin:0; color:#b5b8b4; font-size:15px; }
+@media (max-width:1000px) {
+    .salonea-page .sl-showcase { gap:30px; }
+    .salonea-page .sl-hero-copy { width:70%; }
+    .salonea-page .sl-tech-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:760px) {
+    .arcanira-page.salonea-page .sl-hero {
+        min-height:0;
+        padding:24px 0 36px;
+        background-image:linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),url("assets/salonea/portada-salonea.png");
+    }
+    .salonea-page .sl-hero-copy { width:100%; max-width:none; }
+    .salonea-page .sl-hero-copy .sl-subtitle { font-size:18px; }
+    .salonea-page .sl-logo { width:56px; height:56px; }
+    .salonea-page .sl-title-row { gap:14px; }
+    .salonea-page .sl-showcase { grid-template-columns:minmax(0,1fr); }
+    .salonea-page .sl-showcase-reverse .arc-copy,
+    .salonea-page .sl-showcase-reverse .sl-media { order:initial; }
+    .salonea-page .sl-tech-grid li { padding:18px; }
+}
+@media (max-width:480px) {
+    .salonea-page .sl-tech-grid { grid-template-columns:minmax(0,1fr); }
+}
+
+.salonea-page section[aria-labelledby="auth-title"] .sl-media {
+    width: 100%;
+    max-width: 360px;
+    justify-self: center;
+}

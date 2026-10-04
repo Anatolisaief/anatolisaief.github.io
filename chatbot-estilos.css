@@ -118,3 +118,9 @@
 @media (max-width: 480px) {
     .chatbot-page .cb-functions { grid-template-columns: minmax(0,1fr); }
 }
+
+.chatbot-page section[aria-labelledby="widget-title"] .cb-media {
+    width: 100%;
+    max-width: 300px;
+    justify-self: center;
+}
