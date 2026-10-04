@@ -1914,3 +1914,27 @@ footer small {
     font-size: 18px;
     color: var(--gold);
 }
+
+@media (max-width: 760px) {
+    .portfolio #nav-menu {
+        position: static;
+        left: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+    }
+
+    .portfolio #nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 18px 0;
+        gap: 14px;
+    }
+
+    .portfolio #nav-menu li {
+        margin: 0;
+        text-align: center;
+    }
+}
