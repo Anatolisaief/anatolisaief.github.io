@@ -1,249 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot IA Reutilizable | Anatolii Isaev</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Chatbot IA reutilizable desarrollado con Node.js y Express. Consultas sobre páginas web y PDF, funciones de voz y widget configurable.">
+ <title>Chatbot IA Reutilizable | Anatolii Isaev</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="chatbot-estilos.css">
+ <link rel="icon" type="image/png" href="assets/img/swan-favicon.png">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+<body class="arcanira-page chatbot-page">
+ <a class="arc-skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header arc-header">
 
-<body>
+        <div class="header-container arc-container arc-header-inner">
 
-    <header>
-        <div class="header-container">
-            <h1>Anatolii Isaev</h1>
-            <a href="index.html" class="btn-volver">Volver al portfolio</a>
+            <a class="brand arc-brand" href="index.html">
+
+                <img class="brand-logo arc-brand-logo" src="assets/img/swan.png" alt="">
+
+                <span>Anatolii Isaev</span>
+
+            </a>
+
+
+
+            <a class="arc-back" href="index.html">
+
+                Volver al portfolio
+
+            </a>
+
         </div>
+
     </header>
+<main id="contenido" class="arc-main">
+<section class="arc-hero cb-hero" aria-labelledby="cb-title">
+ <div class="arc-container">
+  <p class="arc-breadcrumb"><a href="index.html">Portfolio</a><span aria-hidden="true">/</span>Chatbot IA</p>
+  <div class="cb-hero-copy">
+   <h1 id="cb-title">Chatbot IA Reutilizable</h1>
+   <p class="cb-subtitle">Chatbot basado en IA capaz de responder preguntas utilizando información obtenida desde páginas web y documentos PDF.</p>
+   <p>Proyecto desarrollado con Node.js, Express y modelos de IA generativa. El sistema permite integrar un asistente virtual en diferentes páginas web mediante un widget reutilizable y configurable.</p>
+   <p>Incluye lectura de PDFs, análisis de páginas web, búsqueda contextual, generación de respuestas con IA, funciones de voz y despliegue en Render.</p>
+   <ul class="arc-tags" aria-label="Tecnologías"><li>Node.js</li><li>Express</li><li>IA generativa</li><li>Web Speech API</li><li>JavaScript</li><li>HTML/CSS</li><li>Render</li><li>JSON</li></ul>
+  </div>
+ </div>
+</section>
+<section class="arc-section" aria-labelledby="flow-title">
+ <div class="arc-section-heading"><h2 id="flow-title">Funcionamiento general</h2></div>
+ <div class="cb-showcase">
+  <div class="arc-copy">
+   <p>El chatbot utiliza una base de conocimiento generada a partir de páginas web y documentos PDF. Cuando el usuario realiza una consulta, el sistema busca la información más relevante y genera una respuesta utilizando IA.</p>
+   <p>El sistema fue diseñado para ser reutilizable y poder integrarse en distintos entornos. Actualmente puede utilizarse en páginas web tradicionales, sitios desarrollados con WordPress y aplicaciones exportadas mediante Unity WebGL.</p>
+   <ul class="cb-list"><li>Lectura de páginas web.</li><li>Procesamiento de documentos PDF.</li><li>Búsqueda contextual de información.</li><li>Integración con modelos de IA (OpenAI y Claude).</li></ul>
+  </div>
+  <figure class="cb-media"><a href="assets/chatbot/diagrama.webp" target="_blank" rel="noopener noreferrer" aria-label="Ver diagrama del chatbot ampliado"><img src="assets/chatbot/diagrama.webp" alt="Diagrama chatbot" loading="lazy"></a><figcaption>Diagrama simplificado del flujo de consulta y generación de respuestas del chatbot.</figcaption></figure>
+ </div>
+</section>
+<section class="arc-section" aria-labelledby="widget-title">
+ <div class="arc-section-heading"><h2 id="widget-title">Widget reutilizable</h2></div>
+ <div class="cb-showcase cb-showcase-reverse">
+  <div class="arc-copy">
+   <p>El asistente se integra mediante un widget reutilizable que puede añadirse fácilmente a distintos proyectos sin modificar el backend. La misma solución se ha utilizado en este portfolio personal, en sitios web desarrollados con WordPress y en aplicaciones Unity exportadas como WebGL.</p>
+   <ul class="cb-list"><li>Botón flotante de acceso rápido.</li><li>Ventana de conversación integrada.</li><li>Configuración dinámica por proyecto.</li><li>Diseño adaptable para escritorio y móvil.</li><li>Integración mediante unas pocas líneas de código.</li></ul>
+   <p class="cb-demo">Esta página utiliza una instancia real del chatbot, por lo que puede probarse directamente desde el botón flotante situado en la esquina inferior derecha.</p>
+  </div>
+  <figure class="cb-media"><a href="assets/chatbot/unity-chatbot.webp" target="_blank" rel="noopener noreferrer" aria-label="Ver captura de Unity WebGL ampliada"><img src="assets/chatbot/unity-chatbot.webp" alt="Integración del chatbot en Unity WebGL" loading="lazy"></a><figcaption>Ejemplo de integración del chatbot en una aplicación Unity WebGL utilizando una configuración personalizada y una base de conocimiento específica para el proyecto.</figcaption></figure>
+ </div>
+</section>
+<section class="arc-section" aria-labelledby="functions-title">
+ <div class="arc-section-heading"><h2 id="functions-title">Funciones destacadas</h2></div>
+ <div class="arc-copy">
+  <p>El sistema incorpora diferentes funcionalidades orientadas a mejorar la experiencia del usuario y facilitar el acceso a la información.</p>
+  <ul class="cb-functions">
+   <li><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>Consultas sobre documentos PDF.</li>
+   <li><i class="fa-solid fa-globe" aria-hidden="true"></i>Consultas sobre páginas web.</li>
+   <li><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>Búsqueda contextual de información.</li>
+   <li><i class="fa-solid fa-comment-dots" aria-hidden="true"></i>Respuestas generadas con IA.</li>
+   <li><i class="fa-solid fa-microphone" aria-hidden="true"></i>Reconocimiento de voz.</li>
+   <li><i class="fa-solid fa-volume-high" aria-hidden="true"></i>Lectura de respuestas por voz.</li>
+  </ul>
+  <p>El asistente puede combinar información procedente de diferentes fuentes para ofrecer respuestas más precisas y adaptadas al contexto de cada proyecto.</p>
+ </div>
+</section>
+<section class="arc-section" aria-labelledby="challenges-title">
+ <div class="arc-section-heading"><h2 id="challenges-title">Retos técnicos y soluciones</h2></div>
+ <div class="arc-copy">
+  <p>Durante el desarrollo del chatbot fue necesario combinar distintas tecnologías para procesar información, generar respuestas y ofrecer una integración sencilla en diferentes proyectos.</p>
+  <ul class="cb-list"><li>Procesar información procedente de PDFs y páginas web.</li><li>Construir una base de conocimiento reutilizable.</li><li>Integrar modelos de IA para la generación de respuestas.</li><li>Diseñar un widget reutilizable compatible con distintos entornos web.</li><li>Desplegar el backend y mantener la configuración remota.</li></ul>
+  <p>Este proyecto permitió aplicar conocimientos de desarrollo backend, integración de APIs, procesamiento de documentos y creación de componentes reutilizables para aplicaciones web.</p>
+ </div>
+</section>
+</main>
+<footer id="contacto">
 
-    <main>
+    <div class="footer-inner">
 
-        <!-- PORTADA -->
-        <section class="proyecto-detalle proyecto-hero">
+        <div>
 
-            <div class="hero-titulo">
-                <h2 class="borderh2">Chatbot IA Reutilizable</h2>
-            </div>
+            <h2>Contacto</h2>
 
-            <p class="proyecto-subtitulo">
-                Chatbot basado en IA capaz de responder preguntas utilizando información
-                obtenida desde páginas web y documentos PDF.
-            </p>
+            <p>Disponible para oportunidades de desarrollo junior.</p>
 
-            <p>
-                Proyecto desarrollado con Node.js, Express y modelos de IA generativa. El sistema permite integrar un
-                asistente virtual en diferentes páginas web mediante un widget reutilizable y configurable.
-            </p>
-
-            <p>
-                Incluye lectura de PDFs, análisis de páginas web, búsqueda contextual,
-                generación de respuestas con IA, funciones de voz y despliegue en Render.
-            </p>
-
-            <div class="tech-tags">
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>IA generativa</span>
-                <span>Web Speech API</span>
-                <span>JavaScript</span>
-                <span>HTML/CSS</span>
-                <span>Render</span>
-                <span>JSON</span>
-            </div>
-
-        </section>
-
-
-        <section class="proyecto-detalle">
-            <h2>Funcionamiento general</h2>
-
-            <div class="proyecto-grid">
-                <div class="proyecto-texto">
-
-                    <p>
-                        El chatbot utiliza una base de conocimiento generada a partir de páginas
-                        web y documentos PDF. Cuando el usuario realiza una consulta, el sistema
-                        busca la información más relevante y genera una respuesta utilizando IA.
-                    </p>
-
-                    <p>
-                        El sistema fue diseñado para ser reutilizable y poder integrarse en distintos
-                        entornos. Actualmente puede utilizarse en páginas web tradicionales, sitios
-                        desarrollados con WordPress y aplicaciones exportadas mediante Unity WebGL.
-                    </p>
-
-                    <ul>
-                        <li>Lectura de páginas web.</li>
-                        <li>Procesamiento de documentos PDF.</li>
-                        <li>Búsqueda contextual de información.</li>
-                        <li>Integración con modelos de IA (OpenAI y Claude).</li>
-                    </ul>
-
-
-
-                </div>
-
-                <div class="proyecto-media">
-
-                    <div class="media-item">
-                        <img src="assets/chatbot/diagrama.webp" alt="Diagrama chatbot" class="diagrama-chatbot">
-
-                        <p class="media-caption">
-                            Diagrama simplificado del flujo de consulta y generación de respuestas del chatbot.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="proyecto-detalle">
-            <h2>Widget reutilizable</h2>
-
-            <div class="proyecto-grid">
-
-                <div class="proyecto-texto">
-
-                    <p>
-                        El asistente se integra mediante un widget reutilizable que puede añadirse
-                        fácilmente a distintos proyectos sin modificar el backend. La misma solución
-                        se ha utilizado en este portfolio personal, en sitios web desarrollados con
-                        WordPress y en aplicaciones Unity exportadas como WebGL.
-                    </p>
-
-                    <ul>
-                        <li>Botón flotante de acceso rápido.</li>
-                        <li>Ventana de conversación integrada.</li>
-                        <li>Configuración dinámica por proyecto.</li>
-                        <li>Diseño adaptable para escritorio y móvil.</li>
-                        <li>Integración mediante unas pocas líneas de código.</li>
-                    </ul>
-
-                    <p class="nota-demo">
-                        Esta página utiliza una instancia real del chatbot, por lo que puede
-                        probarse directamente desde el botón flotante situado en la esquina
-                        inferior derecha.
-                    </p>
-
-                </div>
-
-                <div class="proyecto-media">
-                    <div class="media-item">
-
-                        <img src="assets/chatbot/unity-chatbot.webp" alt="Integración del chatbot en Unity WebGL"
-                            class="chatbot-captura">
-
-                        <p class="caption-chatbot">
-                            Ejemplo de integración del chatbot en una aplicación Unity WebGL
-                            utilizando una configuración personalizada y una base de conocimiento
-                            específica para el proyecto.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </section>
-
-        <section class="proyecto-detalle">
-            <h2>Funciones destacadas</h2>
-
-            <div class="proyecto-texto">
-
-                <p>
-                    El sistema incorpora diferentes funcionalidades orientadas a mejorar
-                    la experiencia del usuario y facilitar el acceso a la información.
-                </p>
-
-                <ul>
-                    <li>Consultas sobre documentos PDF.</li>
-                    <li>Consultas sobre páginas web.</li>
-                    <li>Búsqueda contextual de información.</li>
-                    <li>Respuestas generadas con IA.</li>
-                    <li>Reconocimiento de voz.</li>
-                    <li>Lectura de respuestas por voz.</li>
-                </ul>
-
-                <p>
-                    El asistente puede combinar información procedente de diferentes fuentes
-                    para ofrecer respuestas más precisas y adaptadas al contexto de cada proyecto.
-                </p>
-
-            </div>
-
-
-
-        </section>
-
-        <section class="proyecto-detalle">
-            <h2>Retos técnicos y soluciones</h2>
-
-            <p>
-                Durante el desarrollo del chatbot fue necesario combinar distintas tecnologías
-                para procesar información, generar respuestas y ofrecer una integración sencilla
-                en diferentes proyectos.
-            </p>
-
-            <ul>
-                <li>Procesar información procedente de PDFs y páginas web.</li>
-                <li>Construir una base de conocimiento reutilizable.</li>
-                <li>Integrar modelos de IA para la generación de respuestas.</li>
-                <li>Diseñar un widget reutilizable compatible con distintos entornos web.</li>
-                <li>Desplegar el backend y mantener la configuración remota.</li>
-            </ul>
-
-            <p>
-                Este proyecto permitió aplicar conocimientos de desarrollo backend,
-                integración de APIs, procesamiento de documentos y creación de componentes reutilizables para
-                aplicaciones web.
-            </p>
-        </section>
-
-    </main>
-
-    <footer id="contacto">
-        <h2>Contacto</h2>
-        <p class="email">
-            <i class="fas fa-envelope"></i>
-            anatolisaief&ZeroWidthSpace;@gmail.com
-        </p>
-        <p><i class="fa-brands fa-whatsapp"></i> +34 74 74 088 41</p>
-        <div class="social-icons">
-            <a href="https://github.com/Anatolisaief" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/anatolisaev/" target="_blank" title="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="assets/cv/cv-Anatolii-Isaev.pdf" download="cv-Anatolii-Isaev" class="btn-cv"
-                title="Descargar CV en PDF">
-                <i class="fas fa-file-pdf"></i>
-            </a>
         </div>
-    </footer>
 
-    <script src="js/tarotapp.js"></script>
-    <script>
-        window.ChatbotConfig = {
-            apiBaseUrl: "https://chatbot-07hc.onrender.com",
-            configName: "cv"
-        };
+
+
+        <div class="footer-links">
+
+            <a href="mailto:anatolisaief@gmail.com">
+
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+
+                anatolisaief@gmail.com
+
+            </a>
+
+
+
+            <a href="https://wa.me/34747408841"
+
+    target="_blank" rel="noopener noreferrer"
+
+    aria-label="Contactar por WhatsApp">
+
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+
+    +34 74 74 088 41
+
+</a>
+
+
+
+            <a href="https://www.linkedin.com/in/anatolisaev/"
+
+                target="_blank" rel="noopener noreferrer">
+
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <p class="footer-note">Anatolii Isaev · Vitoria-Gasteiz</p>
+
+</footer>
+<script>
+
+        window.ChatbotConfig = { apiBaseUrl: "https://chatbot-07hc.onrender.com", configName: "cv" };
 
         window.addEventListener("load", () => {
+
             setTimeout(() => {
-                const s = document.createElement("script");
-                s.src = "https://chatbot-07hc.onrender.com/widget.js";
-                s.defer = true;
-                document.body.appendChild(s);
+
+                const script = document.createElement("script");
+
+                script.src = "https://chatbot-07hc.onrender.com/widget.js";
+
+                script.defer = true;
+
+                document.body.appendChild(script);
+
             }, 800);
+
         });
+
     </script>
-
 </body>
-
 </html>

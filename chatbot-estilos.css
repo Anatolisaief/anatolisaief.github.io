@@ -1,0 +1,120 @@
+/* Cargar después de style.css. Reutiliza la plantilla compartida de Arcanira. */
+.arcanira-page.chatbot-page .cb-hero {
+    display: block;
+    width: 100%;
+    min-height: 650px;
+    margin: 0;
+    padding: 28px 0 50px;
+    background-color: #111312;
+    background-image:
+        linear-gradient(to right, rgba(17,19,18,.97) 0%, rgba(17,19,18,.92) 38%, rgba(17,19,18,.55) 65%, rgba(17,19,18,.2) 100%),
+        url("assets/chatbot/portada-chatbot.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.chatbot-page .cb-hero-copy { width: 55%; max-width: 680px; }
+.chatbot-page .cb-hero-copy h1 {
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+.chatbot-page .cb-hero-copy .cb-subtitle {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #dfb965;
+}
+.chatbot-page .cb-hero-copy p { color: #c6c9c3; }
+.chatbot-page .cb-hero-copy .arc-tags { margin-top: 24px; }
+.chatbot-page .cb-showcase {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    align-items: center;
+    gap: 56px;
+}
+.chatbot-page .cb-showcase-reverse .arc-copy { order: 2; }
+.chatbot-page .cb-showcase-reverse .cb-media { order: 1; }
+.chatbot-page .cb-media { min-width: 0; margin: 0; }
+.chatbot-page .cb-media a { display: block; }
+.chatbot-page .cb-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    border: 1px solid #383b35;
+    border-radius: 14px;
+    background: #181a18;
+}
+.chatbot-page .cb-media figcaption {
+    margin-top: 14px;
+    color: #b5b8b4;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+}
+.chatbot-page .cb-list { list-style: none; margin: 22px 0; padding: 0; }
+.chatbot-page .cb-list li {
+    display: grid;
+    grid-template-columns: 14px minmax(0,1fr);
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.chatbot-page .cb-list li::before { content: "•"; color: #dfb965; }
+.chatbot-page .arc-copy .cb-demo {
+    margin: 24px 0 0;
+    padding: 18px 20px;
+    border-left: 3px solid #dfb965;
+    border-radius: 0 8px 8px 0;
+    background: #1b1c17;
+    color: #eeeae1;
+    font-size: 15px;
+}
+.chatbot-page .cb-functions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 18px;
+    margin: 26px 0;
+    padding: 0;
+    list-style: none;
+}
+.chatbot-page .cb-functions li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid #383b35;
+    border-radius: 12px;
+    background: #181a18;
+    font-size: 16px;
+}
+.chatbot-page .cb-functions i {
+    width: 28px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #dfb965;
+    font-size: 24px;
+}
+@media (max-width: 1000px) {
+    .chatbot-page .cb-showcase { gap: 30px; }
+    .chatbot-page .cb-hero-copy { width: 70%; }
+    .chatbot-page .cb-functions { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+    .arcanira-page.chatbot-page .cb-hero {
+        min-height: 0;
+        padding: 24px 0 36px;
+        background-image:
+            linear-gradient(rgba(17,19,18,.9),rgba(17,19,18,.95)),
+            url("assets/chatbot/portada-chatbot.png");
+    }
+    .chatbot-page .cb-hero-copy { width: 100%; max-width: none; }
+    .chatbot-page .cb-hero-copy .cb-subtitle { font-size: 18px; }
+    .chatbot-page .cb-showcase { grid-template-columns: minmax(0,1fr); }
+    .chatbot-page .cb-showcase-reverse .arc-copy,
+    .chatbot-page .cb-showcase-reverse .cb-media { order: initial; }
+    .chatbot-page .cb-functions li { padding: 18px; }
+}
+@media (max-width: 480px) {
+    .chatbot-page .cb-functions { grid-template-columns: minmax(0,1fr); }
+}
