@@ -55,6 +55,8 @@
                     <ul class="arc-tags" aria-label="Tecnologías">
                         <li>Node.js</li>
                         <li>Express</li>
+                        <li>API REST</li>
+                        <li>RAG</li>
                         <li>IA generativa</li>
                         <li>Web Speech API</li>
                         <li>JavaScript</li>
@@ -71,9 +73,14 @@
             </div>
             <div class="cb-showcase">
                 <div class="arc-copy">
-                    <p>El chatbot utiliza una base de conocimiento generada a partir de páginas web y documentos PDF.
-                        Cuando el usuario realiza una consulta, el sistema busca la información más relevante y genera
-                        una respuesta utilizando IA.</p>
+
+                    <p>El chatbot utiliza una arquitectura RAG (Retrieval-Augmented Generation)
+                        para responder preguntas a partir de información extraída de documentos PDF
+                        y páginas web. El backend procesa las fuentes, divide su contenido en
+                        fragmentos y recupera los más relevantes para cada consulta.
+                        Posteriormente, envía ese contexto a un modelo de IA para generar
+                        una respuesta.</p>
+
                     <p>El sistema fue diseñado para ser reutilizable y poder integrarse en distintos entornos.
                         Actualmente puede utilizarse en páginas web tradicionales, sitios desarrollados con WordPress y
                         aplicaciones exportadas mediante Unity WebGL.</p>
@@ -141,43 +148,51 @@
                     precisas y adaptadas al contexto de cada proyecto.</p>
             </div>
         </section>
-       <section class="arc-section" aria-labelledby="challenges-title">
-    <div class="arc-section-heading">
-        <h2 id="challenges-title">Implementación técnica</h2>
-    </div>
 
-    <div class="arc-copy">
-        <p>
-            El backend desarrollado con Node.js y Express procesa
-            las fuentes de información y gestiona las consultas.
-            El widget proporciona la interfaz de conversación
-            y se configura para cada proyecto.
-        </p>
+        <section class="arc-section" aria-labelledby="challenges-title">
+            <div class="arc-section-heading">
+                <h2 id="challenges-title">Implementación técnica</h2>
+            </div>
 
-        <ul class="cb-list">
-            <li>
-                Procesamiento de PDFs y páginas web para construir
-                la base de conocimiento.
-            </li>
-            <li>
-                Búsqueda de información relevante para aportar
-                contexto a las consultas enviadas a los modelos de IA.
-            </li>
-            <li>
-                Configuración del widget y de las fuentes de información
-                según el proyecto.
-            </li>
-            <li>
-                Integración de reconocimiento y lectura de voz
-                mediante Web Speech API.
-            </li>
-            <li>
-                Despliegue del backend en Render y gestión
-                de la configuración remota.
-            </li>
-        </ul>
-    </div>
-</section>
+            <div class="arc-copy">
+                <p>
+                    El proyecto utiliza una arquitectura modular desarrollada
+                    con Node.js y Express. El backend expone una API REST que
+                    gestiona las consultas, recupera información de la base
+                    de conocimiento y se comunica con los proveedores de IA.
+                </p>
+
+                <ul class="cb-list">
+                    <li>
+                        Arquitectura RAG: extracción de contenido de PDFs y
+                        páginas web, división en fragmentos y recuperación
+                        de información relevante.
+                    </li>
+                    <li>
+                        Integración con OpenAI y Claude mediante servicios
+                        independientes y selección del proveedor por configuración.
+                    </li>
+                    <li>
+                        API REST con endpoints para gestionar las consultas
+                        del chatbot y obtener la configuración de cada proyecto.
+                    </li>
+                    <li>
+                        Sistema reutilizable mediante configuraciones JSON
+                        independientes para personalizar las fuentes de información,
+                        el aspecto y el comportamiento del asistente.
+                    </li>
+                    <li>
+                        Configuración de CORS, limitación de solicitudes
+                        y validación de mensajes para controlar el acceso a la API.
+                    </li>
+                    <li>
+                        Despliegue del backend en Render e integración del widget
+                        en páginas web y aplicaciones Unity WebGL.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
     </main>
     <footer id="contacto">
 
