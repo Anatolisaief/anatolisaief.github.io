@@ -2812,3 +2812,73 @@ footer#contacto {
     font-size: 26px;
 }
 
+.portfolio .google-play-button,
+.arcanira-page .google-play-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 6px 0 14px;
+    padding: 7px 12px;
+    border: 1px solid #dfb965;
+    border-radius: 5px;
+    background: transparent;
+    color: #dfb965;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color .2s ease;
+}
+
+.portfolio .google-play-button:hover,
+.arcanira-page .google-play-button:hover {
+    background: rgba(223, 185, 101, .1);
+    color: #dfb965;
+}
+
+.portfolio .project-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.portfolio .project-meta .project-stack {
+    margin: 0;
+}
+
+.portfolio .project-meta .google-play-button {
+    margin: 0;
+    padding: 5px 9px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.arcanira-page .arc-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.arcanira-page .arc-hero-actions > a {
+    margin: 0;
+}
+
+.arcanira-page .arc-hero-actions > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 16px;
+}
+
+.arcanira-page .arc-hero-actions .google-play-button i {
+    font-size: 20px;
+}
